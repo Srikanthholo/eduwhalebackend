@@ -4,17 +4,17 @@ const dbConfig = require("./app/config/db.config");
 
 const app = express();
 
-const Razorpay = require('razorpay');
+// const Razorpay = require('razorpay');
 
-var instance = new Razorpay({
-  key_id: 'rzp_test_GCM7vvTycC6ic7',
-  key_secret: 'mHhzBkOZKg0ElhrRvTFBlZd3',
-});
+// var instance = new Razorpay({
+//   key_id: 'rzp_test_GCM7vvTycC6ic7',
+//   key_secret: 'mHhzBkOZKg0ElhrRvTFBlZd3',
+// });
 
 
 
 var corsOptions = {
-  origin: "http://localhost:3200"
+  origin: "*"
 };
 
 app.use(cors(corsOptions));
@@ -66,7 +66,7 @@ require("./app/routes/product.routes")(app);
 require("./app/routes/company.routes")(app); 
 require("./app/routes/examtitle.routes")(app); 
 
-require("./app/routes/razor.routes")(app); 
+//require("./app/routes/razor.routes")(app); 
 //require("./app/routes/userfiles.routes")(app);
 //require("./app/routes/image.routes")(app);
 
