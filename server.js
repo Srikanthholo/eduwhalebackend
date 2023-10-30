@@ -14,7 +14,7 @@ var instance = new Razorpay({
 
 
 var corsOptions = {
-  origin: "http://localhost:3200"
+  origin: "*"
 };
 
 app.use(cors(corsOptions));
